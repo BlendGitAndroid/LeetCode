@@ -1,4 +1,4 @@
-package com.xuhai.leetcode;
+package com.example.javalib;
 
 public class FindRepeatNumber {
 
