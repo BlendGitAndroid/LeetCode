@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.xuhai.leetcode"
+        applicationId "com.blend.leetcode"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

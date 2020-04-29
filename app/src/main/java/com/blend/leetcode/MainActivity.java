@@ -1,4 +1,4 @@
-package com.xuhai.leetcode;
+package com.blend.leetcode;
 
 import androidx.appcompat.app.AppCompatActivity;
 
