@@ -2,7 +2,9 @@ package com.example.javalib;
 
 /**
  * 这道题就是回溯法，遇到一个坑，就是我把二维数组的长和宽搞反了，出现数组越界。
- * 还有就是a+1和++a的区别。
+ * 还有就是a+1和++a的区别，回溯的时候要保证a不能变。
+ * <p>
+ * 和寻路算法思路相同。
  */
 public class Offer12 {
 
@@ -13,11 +15,11 @@ public class Offer12 {
     }
 
     public boolean exist(char[][] board, String word) {
-        boolean[][] visited = new boolean[board.length][board[0].length];
-        int[] pathLength = {0};
+        boolean[][] visited = new boolean[board.length][board[0].length];   //设置是否已经被访问
+        int[] pathLength = {0}; //已经找到的字符长度
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
-                if (board[i][j] == word.charAt(0)) {
+                if (board[i][j] == word.charAt(0)) {    //找到开始的地方
                     if (hasPath(board, word, visited, i, j, pathLength)) {
                         return true;
                     }
@@ -37,7 +39,7 @@ public class Offer12 {
      * @return 结果
      */
     private boolean hasPath(char[][] board, String word, boolean[][] visited, int row, int col, int[] length) {
-        if (length[0] == word.length()) {
+        if (length[0] == word.length()) {   //
             return true;
         }
         boolean hasPath = false;
