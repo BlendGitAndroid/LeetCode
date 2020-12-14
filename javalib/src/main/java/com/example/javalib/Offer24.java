@@ -27,10 +27,10 @@ class Offer24 {
         ListNode cur = head;
         ListNode next = null;
         while (cur != null) {
-            next = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = next;
+            next = cur.next;    //将cur的下一个值赋值给next
+            cur.next = pre;     //将pre指向cur的下一个值，也就是断开cur的指向链，将cur的下一个值指向pre
+            pre = cur;          //将cur赋值给pre，也就是把cur表示的节点，现在用pre表示
+            cur = next;         //将next赋值给cur，也就是把next表示的节点，现在用cur表示
         }
         return pre;
     }
