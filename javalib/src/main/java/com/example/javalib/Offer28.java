@@ -1,5 +1,9 @@
 package com.example.javalib;
 
+/**
+ *  对称二叉树，就是利用二叉树的性质，来进行递归判断。
+ *  还能利用层次遍历，先创建两个数组，先从左到右层次，再从右到左遍历。
+ */
 class Offer28 {
 
     public static void main(String[] args) {
