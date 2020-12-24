@@ -11,11 +11,13 @@ import java.util.ArrayList;
  * 换成ArrayList勉强没有超时，索引到需要删除的位置，时间复杂度是 O(1)，删除元素时间复杂度是 O(n)，这样它的时间复杂度和
  * 控件复杂度与LinkedList都是相同的，但是没有超时，其实是内存连续空间的拷贝的！所以相比于LinkedList大量非连续性地址访问，
  * ArrayList的性能是很 OK 的！
+ * <p>
+ * 最优的解法思路就是利用递归的思想来看，思路还是比较复杂的。
  */
 class Offer62 {
 
     public static void main(String[] args) {
-        System.out.println(new Offer62().lastRemaining(5, 3));
+        System.out.println(new Offer62().lastRemaining2(5, 3));
     }
 
     public int lastRemaining(int n, int m) {
@@ -69,6 +71,14 @@ class Offer62 {
             n--;
         }
         return list.get(0);
+    }
+
+    public int lastRemaining2(int n, int m) {
+        int last = 0;
+        for (int i = 2; i <= n; i++) {
+            last = (last + m) % i;
+        }
+        return last;
     }
 
 }
