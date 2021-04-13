@@ -1,5 +1,9 @@
 package com.example.javalib.pre;
 
+/**
+ * 这个题目是长度为n的数组，nums里所有的元素都在0 - n-1之间，如果没有重复，调整数组位置后，正好 i == nums[i]。
+ * 解体方法是：进行原地交换。
+ */
 public class FindRepeatNumber {
 
     /*
