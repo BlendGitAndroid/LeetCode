@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
-import jdk.nashorn.api.tree.Tree;
-
 class Tree10 {
 
    public List<Integer> rightSideView(TreeNode root) {

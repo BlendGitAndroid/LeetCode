@@ -6,8 +6,9 @@ import java.util.PriorityQueue;
 
 class Sort2 {
 
+    HashMap<Integer, Integer> hashMap = new HashMap<>();
+
     public int[] topKFrequent(int[] nums, int k) {
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (hashMap.containsKey(nums[i])) {
                 int count = hashMap.get(nums[i]) + 1;
