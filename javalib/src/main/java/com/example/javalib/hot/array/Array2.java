@@ -2,6 +2,7 @@ package com.example.javalib.hot.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 class Array2 {
@@ -10,7 +11,12 @@ class Array2 {
 
         List<int[]> res = new ArrayList<>();
 
-        Arrays.sort(a, (x, y) -> x[0] - y[0]);
+        Arrays.sort(a, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] x, int[] y) {
+                return x[0] - y[0];
+            }
+        });
 
         int l = a[0][0], r = a[0][1];
 
